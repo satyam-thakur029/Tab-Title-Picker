@@ -52,7 +52,7 @@ tab-title-picker-extension/
 
 1. Clone or download this repository:
    ```bash
-  [ git clone https://github.com/your-username/tab-title-picker-extension.git](https://github.com/satyam-thakur029/Tab-Title-Picker.git)
+  [[ git clone https://github.com/your-username/tab-title-picker-extension.git](https://github.com/satyam-thakur029/Tab-Title-Picker.git)]
 
 
 2 Open Chrome and go to:
