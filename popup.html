@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icon-wrapper">
+        <i class="fas fa-browser"></i>
+      </div>
+      <h1>Tab Title Picker</h1>
+      <p class="subtitle">Capture your current tab title instantly</p>
+    </div>
+    
+    <div class="content">
+      <button id="getTitleBtn" class="get-title-btn">
+        <i class="fas fa-magic"></i>
+        <span>Get Current Tab Title</span>
+      </button>
+      
+      <div id="tabTitle" class="title-container">
+        <div class="title-header">
+          <i class="fas fa-tag"></i>
+          <span class="title-label">Tab Title</span>
+        </div>
+        <div class="title-content">
+          <div class="title-text" id="titleText"></div>
+          <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="status-indicator" id="statusIndicator">
+        <i class="fas fa-circle"></i>
+        <span>Ready</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
