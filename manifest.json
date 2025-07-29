@@ -1,18 +1,36 @@
 {
   "manifest_version": 3,
-  "name": "Tab-Title-Picker",
-  "version": "1.0",
-  "description": "Get the title of the current tab with a button click",
+  "name": "LinkedIn Profile Scraper & Tab Title Picker",
+  "version": "2.0",
+  "description": "Get tab titles and scrape LinkedIn profiles automatically",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "storage",
+    "scripting",
+        "http://localhost:3000/*"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*",
+    "http://localhost:3000/*"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Get Tab Title"
+    "default_title": "LinkedIn Scraper & Tab Picker"
   },
-   "icons": {
-        "16": "/images/picker_16.png",
-        "32": "/images/picker_32.png",
-        "48": "/images/picker_48.png"
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"],
+        "run_at": "document_idle"
     }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "/images/picker_16.png",
+    "32": "/images/picker_32.png",
+    "48": "/images/picker_48.png"
+  }
 }

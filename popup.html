@@ -9,29 +9,120 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="icon-wrapper">
-        <i class="fas fa-browser"></i>
-      </div>
-      <h1>Tab Title Picker</h1>
-      <p class="subtitle">Capture your current tab title instantly</p>
+  
+      <h1>LinkedIn Profile Scraper</h1>
+      <p class="subtitle">Scrape profiles & capture tab titles</p>
     </div>
-    
-    <div class="content">
-      <button id="getTitleBtn" class="get-title-btn">
-        <i class="fas fa-magic"></i>
-        <span>Get Current Tab Title</span>
+
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+      <button class="tab-btn active" data-tab="scraper">
+        <i class="fas fa-user-friends"></i>
+        <span>LinkedIn Scraper</span>
       </button>
-      
-      <div id="tabTitle" class="title-container">
-        <div class="title-header">
-          <i class="fas fa-tag"></i>
-          <span class="title-label">Tab Title</span>
+      <button class="tab-btn" data-tab="tab-picker">
+       <i class="fas fa-link">  </i>
+        <span>Tab Picker</span>
+      </button>
+    </div>
+
+    <!-- LinkedIn Scraper Tab Content -->
+    <div class="tab-content active" id="scraper-tab">
+      <!-- API Status Section -->
+      <div class="api-status-card">
+        <div class="api-status">
+          <div style="display: flex; align-items: center;">
+            <div class="api-indicator offline" id="apiIndicator"></div>
+            <span id="apiStatusText">Checking API...</span>
+          </div>
+          <span id="profileCount">0 profiles</span>
         </div>
-        <div class="title-content">
-          <div class="title-text" id="titleText"></div>
-          <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
-            <i class="fas fa-copy"></i>
+      </div>
+
+      <!-- URL Management Section -->
+      <div class="url-section">
+        <h3><i class="fas fa-link"></i> Profile URLs</h3>
+        <div class="url-input-container">
+          <input type="text" id="urlInput" placeholder="https://www.linkedin.com/in/username/" class="url-input">
+          <button id="addUrlBtn" class="add-url-btn">
+            <i class="fas fa-plus"></i>
           </button>
+        </div>
+        
+        <div class="url-list" id="urlList">
+          <!-- URLs will be populated here -->
+        </div>
+      </div>
+
+      <!-- Progress Section -->
+      <div class="progress-section hidden" id="progressSection">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">Processing...</div>
+      </div>
+
+      <!-- Status Messages -->
+      <div class="status-message hidden" id="statusMessage"></div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button id="scrapeBtn" class="main-action-btn">
+          <i class="fas fa-play"></i>
+          <span>Start Scraping</span>
+        </button>
+        
+        <button id="viewDataBtn" class="secondary-btn">
+          <i class="fas fa-database"></i>
+          <span>View Data</span>
+        </button>
+      </div>
+
+      <!-- Data Display Section -->
+      <div class="data-section hidden" id="dataSection">
+        <h3><i class="fas fa-table"></i> Scraped Profiles</h3>
+        <div class="data-controls">
+          <input type="text" id="searchInput" placeholder="Search profiles..." class="search-input">
+          <button id="refreshBtn" class="control-btn">
+            <i class="fas fa-refresh"></i>
+          </button>
+          <button id="clearAllBtn" class="control-btn danger">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="data-list" id="dataList">
+          <!-- Profile data will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Picker Tab Content -->
+    <div class="tab-content" id="tab-picker-tab">
+      <div class="tab-picker-section">
+        <div class="tab-picker-content">
+          <div class="tab-picker-icon">
+            <i class="fas fa-browser"></i>
+          </div>
+          <h3>Tab Title Picker</h3>
+          <p class="tab-picker-subtitle">Capture your current tab title instantly</p>
+          
+          <button id="getTitleBtn" class="get-title-btn">
+            <i class="fas fa-magic"></i>
+            <span>Get Current Tab Title</span>
+          </button>
+          
+          <div id="tabTitle" class="title-container">
+            <div class="title-header">
+              <i class="fas fa-tag"></i>
+              <span class="title-label">Tab Title</span>
+            </div>
+            <div class="title-content">
+              <div class="title-text" id="titleText"></div>
+              <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
