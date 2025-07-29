@@ -1,4 +1,4 @@
-📌 1. Tab-Title-Picker – Chrome Extension
+<img width="1920" height="1080" alt="Screenshot 2025-07-30 030342" src="https://github.com/user-attachments/assets/8fb3d299-d087-4672-96fb-3f38f41ca7ca" />📌 1. Tab-Title-Picker – Chrome Extension
 markdown
 Copy
 Edit
@@ -138,6 +138,10 @@ Extract data using content.js
 Send it to your Node.js API
 
 📸 Screenshot
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/212887b3-4efe-48bd-8f69-332fccb1db66" />
+
+![Uploading Screenshot 2025-07-30 030342.png…]()
+
 
 📄 License
 MIT License
